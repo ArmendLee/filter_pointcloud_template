@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<launch>
+
+
+  <node pkg="filtpointcloud"
+        name="pcfilter"
+        type="filtpointcloud"
+        output="screen">
+  <param name="sub_topic" type="string" value="/camera/depth/color/points"/>
+  <param name="ad_topic" type="string" value="/filted_pointcloud"/>
+  <param name="voxel_resolution" type="double" value="0.04"/>
+  <param name="setRadius" type="double" value="0.08"/>
+  <param name="mincount" type="int" value="3"/>
+  <param name="xfilter" type="bool" value="true"/>
+  <param name="x_min_range" type="double" value="0.08"/>
+  <param name="x_max_range" type="double" value="2.5"/>
+  <param name="yfilter" type="bool" value="true"/>
+  <param name="z_min_range" type="double" value="-2"/>
+  <param name="z_max_range" type="double" value="2"/>
+
+
+    <!--
+    
+    
+    <param name="age" type="int" value="20"/>
+    <param name="age" type="int" value="20"/>
+    <param name="age" type="int" value="20"/>
+    <param name="age" type="int" value="20"/>
+    <param name="age" type="int" value="20"/>
+    <param name="age" type="int" value="20"/>
+
+-->
+  </node>
+
+</launch>
